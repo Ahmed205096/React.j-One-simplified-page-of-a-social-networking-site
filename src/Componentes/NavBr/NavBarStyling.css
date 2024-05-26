@@ -1,0 +1,85 @@
+* {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.Nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  background-color: black;
+  color: white;
+  height: 50px;
+  box-shadow: 2px 6px 10px gray;
+}
+
+.Nav-logo {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.Nav-links {
+  display: flex;
+  width: 200px;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.pretty {
+  background-color: red;
+  position: absolute;
+  top: 67px;
+  animation-name: UnderLineOut;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+}
+
+.pretty1 {
+  width: 60px;
+  height: 3px;
+  right: 24px;
+}
+
+.pretty2 {
+  width: 60px;
+  height: 3px;
+  right: 100px;
+}
+
+.pretty3 {
+  width: 60px;
+  height: 3px;
+  right: 175px;
+}
+
+#home:hover ~ .pretty3,
+#about:hover ~ .pretty2,
+#contact:hover ~ .pretty1 {
+  visibility: visible;
+  animation-name: UnderLine;
+  animation-duration: 0.2s;
+}
+
+@keyframes UnderLine {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 60px;
+  }
+}
+
+@keyframes UnderLineOut {
+  0% {
+    width: 60px;
+  }
+  100% {
+    width: 0;
+    visibility: hidden;
+  }
+}
